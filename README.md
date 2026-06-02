@@ -1,6 +1,6 @@
 # Concurrent File Processor
 
-Java application that processes multiple text files concurrently to analyze word frequency, total word count, character counts, and line counts. Built with JavaFX for GUI and designed for efficient concurrent processing.
+Built to explore Java concurrency, implements work-stealing thread pools for parallel file analysis, with a clean JavaFX GUI and headless CLI mode.
 
 ## 📑 Table of Contents
 
@@ -26,6 +26,17 @@ Java application that processes multiple text files concurrently to analyze word
   - File count tracking
 - **Customizable Output**: Customizable output filename and directory
 - **Cross-Platform**: Works on Windows and Linux
+
+## Screenshots
+
+### Setup Screen
+![Setup Screen](screenshots/setup-screen.png)
+
+### Output Screen
+![Output Screen](screenshots/output-screen.png)
+
+### Output File
+![Output File](screenshots/output-file.png)
 
 ## ⚡ Quickstart
 
@@ -159,7 +170,7 @@ The application follows clean architecture principles with clear separation of c
 ### Code Architecture
 
 - `ConcurrentFileProcessor`: the main entry point into the program
-- `FileStats`: the class that contains the stastics the program collects
+- `FileStats`: the class that contains the statistics the program collects
 
 - **Runner**: handles the different ways the program can run
     - `GuiRunner` handles running the program via GUI window
@@ -174,7 +185,7 @@ The application follows clean architecture principles with clear separation of c
     - **Window**: contains the gui windows and components
         - `Controller` manages window navigation
         - `StartWindow`, `MainWindow`, `OutputWindow` handle the layout of each window
-        - **Components**: handles the creation of the individul components for all windows
+        - **Components**: handles the creation of the individual components for all windows
             - `StartWindowComponents`, `MainWindowComponents`, `OutputWindowComponents` creates the compenents for each window
 
 ### Directory Structure
@@ -187,7 +198,7 @@ concurrent-file-processor/
 │   ├── processor/                      # Core processing logic
 │   ├── runner/                         # Application launchers
 │   └── gui/                            # JavaFX user interface
-│       └── window/compnents            # Window management and UI components
+│       └── window/components            # Window management and UI components
 ├── src/test/java/                      # Comprehensive test suite
 ├── demo_input_files/                   # Sample text files
 └── pom.xml                             # Maven and CI configuration
